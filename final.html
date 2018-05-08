@@ -1,0 +1,111 @@
+<!--
+Program:     Final Project
+Author:      Juan Jose Ramirez
+Description: This program is a web page that is a show page for Bill's Car Stereo's.
+It uses a main page, an About Bill's page where the page gives a small description 
+of the business, a Contact Us link to go to a form page where you can go to a fill 
+in form, a Products page, where there is the option to look at the different 
+products, and a main page. The program uses external CSS, bootstraping, a form,
+relative links, absolute positioning, and other concepts learned in the class.
+-->
+<html>
+<head>
+
+<body>
+<title>Bill's Car Stereos</title>
+ <link rel="stylesheet" type="text/css" href="te.css" />
+
+</style>
+</head>
+<h1><p>Bill's Car Stereos</p></h1><br><br>
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Home')">Home</button>
+  <button class="tablinks" onclick="openCity(event, 'About Us')">About Us</button>
+<button class="tablinks" onclick="openCity(event, 'Products')">Products</button>
+<a href="ContactBills.html"><h4>Contact Us</h4></a>
+
+</div>
+
+<div id="Home" class="tabcontent">
+<h2>Home</h2>
+</div>
+
+
+<!--Speaker-->
+<IMG STYLE="position:absolute; TOP:220px; LEFT:150px; WIDTH:300px; HEIGHT:300px 
+"img src="images/9154073_ra.jpg" />
+
+<DIV style="position: absolute; top:590px; left:155px; width:200px;
+ height:25px"><h1>SALE!</h1></DIV>
+
+<DIV style="position: absolute; top:660px; left:155px; width:200px;
+ height:25px"><h1>$29.95!</h1></DIV>
+
+<!--Amp for $29.95-->
+<IMG STYLE="position:absolute; TOP:540px; LEFT:315px; WIDTH:200px; HEIGHT:200px 
+"img src="images/id_q7001_00.png" />
+
+<div id="About Us" class="tabcontent"> 
+<a href="AboutBills.html"><h2>About Us</h2></a>
+
+</div>
+<div id="Products" class="tabcontent">
+  <h2>Products</h2><br>                                                                 
+
+
+
+   
+         <div id="navbar">
+ 
+         
+        
+<a href="Electronics.html"><h4>Electronics</h4></a>
+          
+<a href="Amps.html"><h4>Amps</h4></a>
+          
+<a href="Speakers.html"><h4>Speakers</h4></a>
+        
+<a href="Lighting.html"><h4>Lighting</h4></a>
+          
+<a href="Screens.html"><h4>Screens</h4></a>
+      
+<a href="Security.html"><h4>Security</h4></a>
+        
+        </div>
+
+
+
+
+<div id="Contact Us" class="tabcontent">
+<a href="ContactBills.html"><h4>Contact Us</h4></a>
+
+</div>
+
+                                      
+
+ <button class="tablinks" onclick="openCity(event, 'Home')" id="defaultOpen"></button>
+
+<script>
+
+document.getElementById("defaultOpen").click();
+ 
+function openCity(evt, cityName) {
+    var i, tabcontent, tablinks;
+
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+
+</body> 
+</html>
